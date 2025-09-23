@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Stellar Threads</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #333;
+            --secondary-color: #f4f4f4;
+            --accent-color: #007bff;
+            --text-color-dark: #333;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+            color: var(--text-color-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .thank-you-image {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            animation: bounce 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=%E2%9C%93" alt="Success Icon" class="thank-you-image">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your order has been placed successfully. You will receive an email confirmation shortly.</p>
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+</body>
+</html>

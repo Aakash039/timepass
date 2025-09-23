@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Threads - Modern Clothing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #333;
+            --secondary-color: #f4f4f4;
+            --accent-color: #007bff;
+            --text-color-light: #fff;
+            --text-color-dark: #333;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+            color: var(--text-color-dark);
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500/333333/ffffff?text=Modern+Clothing');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .buy-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stellar Threads</h1>
+        <p>Your style, elevated.</p>
+    </header>
+
+    <main class="container">
+        <section class="products-section">
+            <h2>Our Collection</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="1" data-product-name="Classic White T-shirt" data-product-price="₹1,200">
+                    <img src="https://via.placeholder.com/600x600/f4f4f4/333333?text=White+T-shirt" alt="Classic White T-shirt">
+                    <div class="product-info">
+                        <h3>Classic White T-shirt</h3>
+                        <p>A timeless staple for every wardrobe. Made with 100% premium cotton.</p>
+                        <span class="price">₹1,200</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="2" data-product-name="Distressed Blue Jeans" data-product-price="₹2,500">
+                    <img src="https://via.placeholder.com/600x600/3498db/ffffff?text=Blue+Jeans" alt="Distressed Blue Jeans">
+                    <div class="product-info">
+                        <h3>Distressed Blue Jeans</h3>
+                        <p>Comfortable and stylish. Perfect for a casual, modern look.</p>
+                        <span class="price">₹2,500</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="3" data-product-name="Elegant Floral Dress" data-product-price="₹3,500">
+                    <img src="https://via.placeholder.com/600x600/e74c3c/ffffff?text=Floral+Dress" alt="Elegant Floral Dress">
+                    <div class="product-info">
+                        <h3>Elegant Floral Dress</h3>
+                        <p>A beautiful dress with a delicate floral pattern. Ideal for any occasion.</p>
+                        <span class="price">₹3,500</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="4" data-product-name="Urban Puffer Jacket" data-product-price="₹4,800">
+                    <img src="https://via.placeholder.com/600x600/8e44ad/ffffff?text=Puffer+Jacket" alt="Urban Puffer Jacket">
+                    <div class="product-info">
+                        <h3>Urban Puffer Jacket</h3>
+                        <p>Stay warm and trendy. Lightweight and water-resistant for the urban adventurer.</p>
+                        <span class="price">₹4,800</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="5" data-product-name="Slim Fit Chinos" data-product-price="₹1,800">
+                    <img src="https://via.placeholder.com/600x600/2ecc71/ffffff?text=Chinos" alt="Slim Fit Chinos">
+                    <div class="product-info">
+                        <h3>Slim Fit Chinos</h3>
+                        <p>Versatile and comfortable chinos that can be dressed up or down.</p>
+                        <span class="price">₹1,800</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="6" data-product-name="Striped Polo Shirt" data-product-price="₹1,500">
+                    <img src="https://via.placeholder.com/600x600/f39c12/ffffff?text=Polo+Shirt" alt="Striped Polo Shirt">
+                    <div class="product-info">
+                        <h3>Striped Polo Shirt</h3>
+                        <p>A classic polo with a modern twist. Perfect for a smart-casual look.</p>
+                        <span class="price">₹1,500</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buyButtons = document.querySelectorAll('.buy-button');
+            
+            buyButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productCard = event.target.closest('.product-card');
+                    const product = {
+                        id: productCard.dataset.productId,
+                        name: productCard.dataset.productName,
+                        price: productCard.dataset.productPrice
+                    };
+                    
+                    // Save product details to localStorage
+                    localStorage.setItem('selectedProduct', JSON.stringify(product));
+                    
+                    // Redirect to the form page
+                    window.location.href = 'form.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
